@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Invoice Generator</h2>
+        <div class="content">
+            <form id="invoiceForm">
+                <label for="awbNo">AWB No.:</label>
+                <input type="text" id="awbNo" name="awbNo" required>
+
+                <label for="consignee">Consignee:</label>
+                <input type="text" id="consignee" name="consignee" required>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <label for="net">Net:</label>
+                <input type="text" id="net" name="net" required>
+
+                <label for="networkNo">Network No.:</label>
+                <input type="text" id="networkNo" name="networkNo" required>
+
+                <label for="ds">D/S:</label>
+                <input type="text" id="ds" name="ds" required>
+
+                <label for="pcs">Pcs:</label>
+                <input type="number" id="pcs" name="pcs" required>
+
+                <label for="weight">Weight:</label>
+                <input type="number" id="weight" name="weight" required>
+
+                <label for="amount">Amount:</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <label for="covidCharge">COVID Charge:</label>
+                <input type="number" id="covidCharge" name="covidCharge" required>
+
+                <label for="fuelCharge">Fuel Charge:</label>
+                <input type="number" id="fuelCharge" name="fuelCharge" required>
+
+                <button type="submit">Generate Invoice</button>
+            </form>
+
+            <div id="invoiceDisplay" class="invoice">
+                <h3>Tax Invoice</h3>
+                <div class="header-info">
+                    <p>HPL Logistics Pvt. Ltd.</p>
+                    <p>Tel: 93175 23540, 93566 00042</p>
+                    <p>Email: hpllogistics.cs@gmail.com, Website: www.hpllogistics.in</p>
+                    <p>Address: 25-B, Dhayan Singh Complex, Opp. Bus Stand, Ludhiana</p>
+                </div>
+
+                <p>Date: <span id="invoiceDate"></span></p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>AWB No.</th>
+                            <th>Consignee</th>
+                            <th>Destination</th>
+                            <th>Net</th>
+                            <th>Network No.</th>
+                            <th>D/S</th>
+                            <th>Pcs</th>
+                            <th>Weight</th>
+                            <th>Amount</th>
+                            <th>COVID Charge</th>
+                            <th>Fuel Charge</th>
+                            <th>G.Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="displayAwbNo"></td>
+                            <td id="displayConsignee"></td>
+                            <td id="displayDestination"></td>
+                            <td id="displayNet"></td>
+                            <td id="displayNetworkNo"></td>
+                            <td id="displayDS"></td>
+                            <td id="displayPcs"></td>
+                            <td id="displayWeight"></td>
+                            <td id="displayAmount"></td>
+                            <td id="displayCovidCharge"></td>
+                            <td id="displayFuelCharge"></td>
+                            <td id="displayGrandTotal"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="footer-info">
+                    <p>Bank Name: HDFC Bank</p>
+                    <p>A/C No.: 99900000004042</p>
+                    <p>NEFT/RTGS: HDFC0000855</p>
+                    <p>Branch: Ferozepur Road, Ludhiana</p>
+                    <p>GST No.: 03DDOPM9654Q1ZJ</p>
+                    <p>PAN No.: AADCH1392Q</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
